@@ -228,5 +228,8 @@ ENTRYPOINT ["/entrypoint.sh"]
 #------------------------------------------------------------------------------
 # ATUL, QEMU Installtion
 
-RUN apt-get install -y libpixman-1-0 libsdl2-2.0-0 libslirp0 --assume-yes
+RUN apt-get install -y libpixman-1-0 --assume-yes
+RUN apt-get install -y libsdl2-2.0-0 --assume-yes
+RUN apt-get install -y libslirp0 --assume-yes
 RUN wget -O espressif-qemu-binary.tar.xz https://github.com/espressif/qemu/releases/download/esp-develop-9.2.2-20250817/qemu-xtensa-softmmu-esp_develop_9.2.2_20250817-x86_64-linux-gnu.tar.xz && tar -C /opt/espressif-qemu/ -xf espressif-qemu-binary.tar.xz && rm espressif-qemu-binary.tar.xz 
+
