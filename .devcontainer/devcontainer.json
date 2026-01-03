@@ -4,6 +4,7 @@
     "dockerfile": "../Dockerfile.espressif",
     "context": ".."
   },
+  "postCreateCommand": "echo 'export PATH=$PATH:/opt/espressif-qemu/qemu/bin' >> ~/.bashrc && bash -c \"source ~/.bashrc\"",
   "customizations": {
     "vscode": {
       "extensions": [
